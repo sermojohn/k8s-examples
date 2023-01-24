@@ -24,3 +24,10 @@ spec:
           limits:
             cpu: 100m
             memory: 150M
+        volumeMounts:
+        - name: datastore-storage
+          mountPath: /usr/data
+      volumes:
+      - name: datastore-storage
+        persistentVolumeClaim:
+          claimName: datastore-claim

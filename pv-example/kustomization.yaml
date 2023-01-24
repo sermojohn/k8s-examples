@@ -8,5 +8,6 @@ commonLabels:
   environment: demo
 
 resources:
+  - resources/namespace.yaml
   - resources/pvc.yaml
   - resources/deployment.yaml

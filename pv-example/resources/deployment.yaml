@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pv-app
+  labels:
+    app: pv-app
+spec:
+  selector:
+    matchLabels:
+      app: pv-app
+  template:
+    metadata:
+      labels:
+        app: pv-app
+    spec:
+      containers:
+      - name: pv-app-main
+        image: "nginxdemos/hello:0.3"
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50M
+          limits:
+            cpu: 100m
+            memory: 150M

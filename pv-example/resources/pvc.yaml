@@ -10,4 +10,4 @@ spec:
       storage: 500Mi
   accessModes:
   - ReadWriteOnce
-  storageClassName: default
+  storageClassName: manual
